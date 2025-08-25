@@ -1,0 +1,29 @@
+In CSS, em and rem are relative units of measurement used for sizing elements, particularly for font sizes, but also for other properties like margin and padding. 
+  
+  The key difference lies in their reference point:
+
+
+em units:
+
+  -  Are relative to the font size of the parent element. 
+  -  If a parent element has a font-size of 16px, then 1em within a child element of that parent will equal 16px.
+  -  This means that em units can lead to compounding effects in nested elements, where the size of an element is determined by its immediate parent, 
+    which in turn is determined by its own parent, and so on. 
+  -  This can make scaling challenging in deeply nested structures.
+
+
+rem units:
+
+  -  Are relative to the font size of the root HTML element (the <html> tag). 
+  -  This provides a consistent and predictable base for sizing throughout the entire document, as 1rem will always refer to the font size set on the <html> element, regardless of any parent element's font size.
+  -  This makes rem units generally easier to manage for overall page scaling and responsive design, as you can adjust the base font size on the <html> element to scale the entire page proportionally.
+
+
+
+When to use each:
+
+  -  rem is generally preferred for overall layout and global typography
+        where you want consistent scaling relative to a single root value. This simplifies responsive design, as changing the root font size scales everything predictably.
+
+  -  em can be useful for component-level scaling
+        where you want an element's size to be relative to its immediate parent. For example, using em for padding on a button ensures the padding scales proportionally with the button's font size.
