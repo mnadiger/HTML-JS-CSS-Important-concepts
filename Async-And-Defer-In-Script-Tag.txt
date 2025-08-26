@@ -5,7 +5,7 @@ ASYNC:
 
 - Once the script is downloaded, its execution begins immediately, potentially pausing HTML parsing to do so. 
 - This means scripts with async are not guaranteed to execute in the order they appear in the HTML.
-- async is generally for scripts that don't need the DOM ready. defer is for scripts that require the DOM to be parsed or need a specific execution order.
+- async is generally for scripts that don't need the DOM ready. 
 
 
 
